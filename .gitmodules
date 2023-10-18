@@ -1,3 +1,6 @@
 [submodule "LDTS/project-l04gr01"]
 	path = LDTS/project-l04gr01
 	url = https://github.com/FEUP-LDTS-2022/project-l04gr01
+[submodule "BDAD/PROJ_BDAD"]
+	path = BDAD/PROJ_BDAD
+	url = https://github.com/ukiyun/PROJ_BDAD
