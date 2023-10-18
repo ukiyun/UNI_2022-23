@@ -4,3 +4,15 @@
 [submodule "BDAD/PROJ_BDAD"]
 	path = BDAD/PROJ_BDAD
 	url = https://github.com/ukiyun/PROJ_BDAD
+[submodule "AED/TrabalhoAED"]
+	path = AED/TrabalhoAED
+	url = https://github.com/JoaoPedroPass0s/TrabalhoAED
+[submodule "AED/PROJ_AED2"]
+	path = AED/PROJ_AED2
+	url = https://github.com/danieldoria1305/PROJ_AED2
+[submodule "AED/AED/PROJ_AED"]
+	path = AED/AED/PROJ_AED
+	url = https://github.com/JoaoPedroPass0s/TrabalhoAED
+[submodule "AED/PROJ_AED"]
+	path = AED/PROJ_AED
+	url = https://github.com/JoaoPedroPass0s/TrabalhoAED
