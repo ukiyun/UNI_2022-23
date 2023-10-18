@@ -1,0 +1,115 @@
+>>>> [1] xpm2_open1 <<<<
+Executing command 'xpm2_open' ...
+=================================================================
+==5881==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x2589618f8 bytes
+    #0 0x7fc13cc661c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5584d4a48188 in __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5584d4a46998 in std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5584d4a45102 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<char const, prog::Color>, false> > >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable_policy.h:1927
+    #4 0x5584d4a442f2 in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable.h:440
+    #5 0x5584d4a432dc in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/hashtable.h:1129
+    #6 0x5584d4a41da8 in std::unordered_map<char, prog::Color, std::hash<char>, std::equal_to<char>, std::allocator<std::pair<char const, prog::Color> > >::unordered_map(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/unordered_map.h:155
+    #7 0x5584d4a3e054 in prog::loadFromXPM2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/XPM2.cpp:22
+    #8 0x5584d49f794a in prog::Script::xpm2_open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:156
+    #9 0x5584d49f445a in prog::Script::run() /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:52
+    #10 0x5584d49c34fb in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbb4fb)
+    #11 0x5584d49c42fd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbc2fd)
+    #12 0x5584d49c6173 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbe173)
+    #13 0x5584d49c25c0 in main /mnt/c/users/mmaru/desktop/project restructured/test.cpp:186
+    #14 0x7fc13c04bd8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+==5881==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99 in operator new(unsigned long)
+==5881==ABORTING
+>>>> [2] xpm2_open2 <<<<
+Executing command 'xpm2_open' ...
+=================================================================
+==5882==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x2589618f8 bytes
+    #0 0x7fc13cc661c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5584d4a48188 in __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5584d4a46998 in std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5584d4a45102 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<char const, prog::Color>, false> > >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable_policy.h:1927
+    #4 0x5584d4a442f2 in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable.h:440
+    #5 0x5584d4a432dc in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/hashtable.h:1129
+    #6 0x5584d4a41da8 in std::unordered_map<char, prog::Color, std::hash<char>, std::equal_to<char>, std::allocator<std::pair<char const, prog::Color> > >::unordered_map(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/unordered_map.h:155
+    #7 0x5584d4a3e054 in prog::loadFromXPM2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/XPM2.cpp:22
+    #8 0x5584d49f794a in prog::Script::xpm2_open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:156
+    #9 0x5584d49f445a in prog::Script::run() /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:52
+    #10 0x5584d49c34fb in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbb4fb)
+    #11 0x5584d49c42fd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbc2fd)
+    #12 0x5584d49c6173 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbe173)
+    #13 0x5584d49c25c0 in main /mnt/c/users/mmaru/desktop/project restructured/test.cpp:186
+    #14 0x7fc13c04bd8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+==5882==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99 in operator new(unsigned long)
+==5882==ABORTING
+>>>> [3] xpm2_open3 <<<<
+Executing command 'xpm2_open' ...
+=================================================================
+==5883==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x2589618f8 bytes
+    #0 0x7fc13cc661c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5584d4a48188 in __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5584d4a46998 in std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5584d4a45102 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<char const, prog::Color>, false> > >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable_policy.h:1927
+    #4 0x5584d4a442f2 in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable.h:440
+    #5 0x5584d4a432dc in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/hashtable.h:1129
+    #6 0x5584d4a41da8 in std::unordered_map<char, prog::Color, std::hash<char>, std::equal_to<char>, std::allocator<std::pair<char const, prog::Color> > >::unordered_map(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/unordered_map.h:155
+    #7 0x5584d4a3e054 in prog::loadFromXPM2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/XPM2.cpp:22
+    #8 0x5584d49f794a in prog::Script::xpm2_open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:156
+    #9 0x5584d49f445a in prog::Script::run() /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:52
+    #10 0x5584d49c34fb in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbb4fb)
+    #11 0x5584d49c42fd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbc2fd)
+    #12 0x5584d49c6173 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbe173)
+    #13 0x5584d49c25c0 in main /mnt/c/users/mmaru/desktop/project restructured/test.cpp:186
+    #14 0x7fc13c04bd8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+==5883==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99 in operator new(unsigned long)
+==5883==ABORTING
+>>>> [4] xpm2_open4 <<<<
+Executing command 'xpm2_open' ...
+=================================================================
+==5884==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x2589618f8 bytes
+    #0 0x7fc13cc661c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5584d4a48188 in __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5584d4a46998 in std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5584d4a45102 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<char const, prog::Color>, false> > >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable_policy.h:1927
+    #4 0x5584d4a442f2 in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable.h:440
+    #5 0x5584d4a432dc in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/hashtable.h:1129
+    #6 0x5584d4a41da8 in std::unordered_map<char, prog::Color, std::hash<char>, std::equal_to<char>, std::allocator<std::pair<char const, prog::Color> > >::unordered_map(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/unordered_map.h:155
+    #7 0x5584d4a3e054 in prog::loadFromXPM2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/XPM2.cpp:22
+    #8 0x5584d49f794a in prog::Script::xpm2_open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:156
+    #9 0x5584d49f445a in prog::Script::run() /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:52
+    #10 0x5584d49c34fb in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbb4fb)
+    #11 0x5584d49c42fd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbc2fd)
+    #12 0x5584d49c6173 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbe173)
+    #13 0x5584d49c25c0 in main /mnt/c/users/mmaru/desktop/project restructured/test.cpp:186
+    #14 0x7fc13c04bd8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+==5884==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99 in operator new(unsigned long)
+==5884==ABORTING
+>>>> [5] xpm2_open5 <<<<
+Executing command 'xpm2_open' ...
+=================================================================
+==5885==ERROR: AddressSanitizer: allocator is out of memory trying to allocate 0x2589618f8 bytes
+    #0 0x7fc13cc661c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5584d4a48188 in __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5584d4a46998 in std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5584d4a45102 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<char const, prog::Color>, false> > >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable_policy.h:1927
+    #4 0x5584d4a442f2 in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_allocate_buckets(unsigned long) /usr/include/c++/11/bits/hashtable.h:440
+    #5 0x5584d4a432dc in std::_Hashtable<char, std::pair<char const, prog::Color>, std::allocator<std::pair<char const, prog::Color> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/hashtable.h:1129
+    #6 0x5584d4a41da8 in std::unordered_map<char, prog::Color, std::hash<char>, std::equal_to<char>, std::allocator<std::pair<char const, prog::Color> > >::unordered_map(unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, prog::Color> > const&) /usr/include/c++/11/bits/unordered_map.h:155
+    #7 0x5584d4a3e054 in prog::loadFromXPM2(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/XPM2.cpp:22
+    #8 0x5584d49f794a in prog::Script::xpm2_open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:156
+    #9 0x5584d49f445a in prog::Script::run() /mnt/c/users/mmaru/desktop/project restructured/Script.cpp:52
+    #10 0x5584d49c34fb in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbb4fb)
+    #11 0x5584d49c42fd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbc2fd)
+    #12 0x5584d49c6173 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/mnt/c/users/mmaru/desktop/project restructured/test+0xbe173)
+    #13 0x5584d49c25c0 in main /mnt/c/users/mmaru/desktop/project restructured/test.cpp:186
+    #14 0x7fc13c04bd8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+==5885==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99 in operator new(unsigned long)
+==5885==ABORTING

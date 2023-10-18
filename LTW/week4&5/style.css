@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body{
+    margin: 1em;
+}
+/* HEADER SECTION */ 
+body > header{
+    font-family: "Lora",serif;
+    background-color: #046dd5;  /*weird, offuscates the text*/
+}
+
+
+/* NOT WORKING
+body > header h1{
+    color: white;
+
+}*/
+
+#signup {
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    color: black;
+    font-size: larger;
+    padding: 1em;
+    margin: 1em;
+}
+
+
+/*RELATED SECTION*/
+
+
+#related {
+    background-color: #2A2F33;
+    color: white;
+    padding: 1em;
+    font-family: "Lora", serif;
+    font-weight: 10;
+    font-size: 11pt;
+}
+
+#related a:link,
+#related a:visited,
+#related a:hover {
+   color: white;
+   text-decoration: none;
+   letter-spacing: 1px;
+}
+
+
+/* NEWS SECTION ARTICLES*/
+
+#news article > p{
+    font-family: "Lora", serif;
+    font-weight:100;
+    font-size: 12pt;
+    text-indent: 1mm;
+    
+}
+
+#news article > p::first-letter{
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+#news article > footer{
+    background-color: #F4655F;
+    padding: 1em;
+}
+
+.author, .tags, .date, .comments{
+    font-family: "Lora", serif;
+    color: white;
+    
+}
+
+#news a:link,
+#news a:visited,
+#news a:hover {
+   color: white;
+   text-decoration: underline;
+   text-underline-offset: 5px;
+}
+.author::before{
+    content: "By ";
+}
+.comments::after{
+    content: "   comments";
+}
+
+
