@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "979264947918",
+    "project_id": "eventapp-e80cc",
+    "storage_bucket": "eventapp-e80cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979264947918:android:ffb7cf571245ceed52329f",
+        "android_client_info": {
+          "package_name": "com.example.cityboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979264947918-o56u229ie6731jdunrn68eb8gtpng28j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQcGxd-tQ_ewRtKRpZgkM-3rtPCRYOHEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979264947918-o56u229ie6731jdunrn68eb8gtpng28j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
